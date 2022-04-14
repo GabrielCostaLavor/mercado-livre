@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --yellow: #fff159;
+    --background:#ebebeb;
+    --title: #666;
+    --blue: #3483fa;
+    --black: #333;
+    --green: #00a650;
+    --gradient: linear-gradient(90deg,#a90f90 55%,#0c1a51)
+}
+html{
+    @media (max-width: 1080px){
+        font-size: 93.75%;
+    }
+    @media (max-width: 720px){
+        font-size: 87.5%;
+    }
+}
+body{
+    background: var(--background);
+    color: var(--textos);
+}
+body, input, button, textarea, select{
+    font-size: 1rem;
+    font-family: 'Proxima Nova' !important;
+    font-weight: 400;
+}
+h1,h2,h3,h4,h5 strong{
+    font-weight: 600;
+}
+
+button{
+    cursor: pointer;
+}
+[disabled]{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+@font-face {
+    font-family:'Proxima Nova';
+    src: url('../../public/fonts/ProximaNovaFont.otf');
+}
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1184px;
+    @media (max-width: 1200px){
+        max-width: 1140px;
+    }
+    @media (max-width: 992px){
+        max-width: 960px;
+    }
+    @media (max-width: 768px){
+        max-width: 720px;
+    }
+    @media (max-width: 576px){
+        max-width: 100%;
+    }
+}
+.containerBanner{
+    max-width: 1600px;
+    margin: auto;
+}
+#__next{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main';
+}
+header{
+    grid-area: "header";
+}
+main{
+    grid-area: "main";
+}
+
+.carouselProds .slider-list{
+    display: flex;
+    align-items: flex-start;
+}
+/* 
+.slider-container .slider-control-centerleft button{
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border-width: 0;
+    color: var(--black);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.19);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.19);
+    cursor: pointer;
+    display: none;
+    height: 64px;
+    outline: 0;
+    position: absolute;
+    top: 48%;
+    width: 64px;
+    z-index: 2;
+}
+.slider-container:hover {
+    .slider-control-centerleft button{
+        display: block;
+    }
+} */
