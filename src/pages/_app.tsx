@@ -9,7 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Header />
-      <Component {...pageProps} />
+      <div className="main">  
+        <Component {...pageProps} />
+      </div>
       <Footer />
     </ChakraProvider>
   )

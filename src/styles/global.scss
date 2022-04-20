@@ -73,17 +73,9 @@ button{
 }
 #__next{
     display: grid;
-    grid-template-areas: 
-    'header'
-    'main';
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
 }
-header{
-    grid-area: "header";
-}
-main{
-    grid-area: "main";
-}
-
 .carouselProds .slider-list{
     display: flex;
     align-items: flex-start;
