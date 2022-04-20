@@ -1,0 +1,23 @@
+.categoryItem{
+    background-color: #fff;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px;
+
+    .categoryIcon{
+        height: 48px;
+        width: 48px;
+        color: #3483fa;
+        font-weight: 300;
+    }
+    .categoryTitle{
+        h2{
+            color: var(--black);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 15px;
+        }
+    }
+}

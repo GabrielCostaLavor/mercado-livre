@@ -1,4 +1,5 @@
 import Document, {Head, Html, Main, NextScript} from "next/document";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 
 export default class MyDocument extends Document{
@@ -12,7 +13,6 @@ export default class MyDocument extends Document{
                     <script src="https://kit.fontawesome.com/f6f4d87341.js" ></script>
                 </Head>
                 <body>
-                    <Header />
                     <Main />
                     <NextScript />
                 </body>

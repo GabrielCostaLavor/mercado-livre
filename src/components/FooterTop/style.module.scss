@@ -1,0 +1,39 @@
+.footerTop{
+    background-color: var(--white);
+    margin-top: 80px;
+    .footerTopContainer{
+        padding: 40px 0;
+        display: flex;
+        .footerItem{
+            display: flex;
+            flex-direction: column;
+            padding: 35px 45px 20px;
+            align-items: center;
+            flex: 4;
+            .footerIcon{
+                height: 55px;
+            }
+            .footerContent{
+            text-align: center;
+            h1{
+                color: #4b4b4b;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 1.4;
+                margin: 16px 0 0;
+            }
+            p{
+                color: #999;
+                font-size: 15px;
+                line-height: 1.2;
+                margin: 4px 0 10px;
+            }
+            a{
+                color: var(--blue);
+                font-size: 14px;
+                text-decoration: none;
+            }
+            }
+        }
+    }
+}

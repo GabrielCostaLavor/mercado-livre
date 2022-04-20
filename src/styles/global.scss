@@ -10,7 +10,12 @@
     --blue: #3483fa;
     --black: #333;
     --green: #00a650;
-    --gradient: linear-gradient(90deg,#a90f90 55%,#0c1a51)
+    --gradient: linear-gradient(90deg,#a90f90 55%,#0c1a51);
+    --white: #fff;
+    --gray300: '#999';
+    --gray600: '#666';
+    --gray700: '#333';
+    --gray900: '#4b4b4b';
 }
 html{
     @media (max-width: 1080px){
@@ -29,8 +34,9 @@ body, input, button, textarea, select{
     font-family: 'Proxima Nova' !important;
     font-weight: 400;
 }
-h1,h2,h3,h4,h5 strong{
+h1,h2,h3,h4,h5, strong{
     font-weight: 600;
+    line-height: 1.25;
 }
 
 button{
@@ -81,6 +87,11 @@ main{
 .carouselProds .slider-list{
     display: flex;
     align-items: flex-start;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 /* 
 .slider-container .slider-control-centerleft button{

@@ -17,9 +17,9 @@ export function Header(){
                     <img src='/logo.png' alt="" />
                 </Box>
                 <Box className={'serach'} flex={6} pos={'relative'} w={'590px'} maxW={'590px'} >
-                    <Input type='search' placeholder="Buscar produtos, marcas e muito mais" fontSize={'0.9rem'} boxShadow={'0 1px 2px 0 rgb(0 0 0 / 20%)'} px={'1rem'} w={'590px'} maxW={'590px'} height={'38px'} _placeholder={{color: 'gray.100'}} />
+                    <Input type='search' placeholder="Buscar produtos, marcas e muito mais" fontSize={'0.9rem'} boxShadow={'0 1px 2px 0 rgb(0 0 0 / 20%)'} px={'1rem'} w={'590px'} maxW={'590px'} height={'38px'} _placeholder={{color: 'gray.300'}} bg={'white'} border={'none'} borderRadius={'2px'}/>
                     <Flex pos={'absolute'} top={0} right={0} height={38} align={'center'} px={15}>
-                        <Box height={'26px'} borderLeft={'1px solid #e2e8f0' } pl={6}>&nbsp;</Box><FaSistrix fontSize={'20px'} />
+                        <Box height={'26px'} borderLeft={'1px solid #e2e8f0' } pl={3}></Box><FaSistrix fontSize={'20px'} />
                     </Flex>
                 </Box>
                 <Box className={'discountHeader'} flex={4} justifyContent={'right'}>
