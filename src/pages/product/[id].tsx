@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { api } from "../../service/api"
 import styleClass from "./style.module.scss"
 import {AiFillStar} from "react-icons/ai"
+import { ProdColumn } from "../../components/ProdColumn"
 
 interface GetProductProps{
     id: number,
@@ -79,15 +80,18 @@ export default function prod( {result}:ProductProps){
                                     <li>Com termostato.</li>
                                     <li>Dimensões: 51.8cm de largura, 94.8cm de altura e 60.3cm de profundidade.</li>
                                 </ul>
-                                <a href="#" className={styleClass.moreCharacteristics}></a>
+                                <a href="#" className={styleClass.moreCharacteristics}>Ver caracteristica</a>
                             </div>
                         </div>
+                        <div className={styleClass.purchaseOptions}>
+                            <h2>Opções de compra:</h2>
+                            <a href="#">18 produtos novos a partir de {priceFinal}</a>
+                        </div>
                     </div>
-                </div> 
-            </div>
-            <div className={styleClass.prodColumn}>
-
-            </div>
+                </div>
+                <div className={styleClass.row}></div>
+                </div>
+                <ProdColumn />
         </div>
     )
 }
