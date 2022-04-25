@@ -12,11 +12,7 @@ import { api } from "./api";
 
 export function getProducts(){
 
-    api.get('https://fakestoreapi.com/products/1')
-    .then(response => {
-        const products
-    }). 
+    const response = api.get('https://fakestoreapi.com/products/');
 
-    console.log(products)
-    return products
+    return {data: response.data}
 } */

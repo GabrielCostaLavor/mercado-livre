@@ -2,12 +2,19 @@
     background-color: var(--white);
     height: 100%;
     display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+
     .prodDetails{
+        width: 100%;
+        max-width: 770px;
+        margin: auto;
 
         .prodItem{
             display: flex;
             position: relative;
-
+            
             .prodImg{
                 height: 100%;
                 margin: 24px 0 0;
@@ -23,7 +30,7 @@
             }
             .prodContent{
                 margin-top: 40px;
-
+                max-width: 352px;
                 .productSubtitle{
                     color: rgba(0,0,0,.55);
                     font-size: 0.875rem;
