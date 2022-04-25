@@ -1,47 +1,38 @@
 import { GetStaticProps } from "next"
-import { useEffect, useState } from "react"
-import { api } from "../../service/api"
 import styleClass from "./style.module.scss"
 import {AiFillStar} from "react-icons/ai"
 import { ProdColumn } from "../../components/ProdColumn"
 
-interface GetProductProps{
-    id: number,
-    title: string,
-    price: number,
-    category: string,
-    image: any,
-    description: string
-}
 
 interface ProductProps{
-    result : {
-        prodId: number
-    }
+    data : {
+        id: number,
+        title: string,
+        price: number,
+        category: string,
+        image: any,
+        description: string
+        }
 }
 
 
-export default function prod( {result}:ProductProps){
+export default function prod( {data}:ProductProps){
 
-    const [product, setProduct] = useState<GetProductProps[]>([])
 
-    useEffect(() => {
-        api.get(`https://fakestoreapi.com/products/${result.prodId}`)
-        .then(response => setProduct(response.data)
-    )})
-       const priceTest =  1000
-       const priceFinal = priceTest.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-       const priceParcel = (priceTest / 10).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    const price =  Number(data.price)
+    const priceFinal = price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    const priceParcel = (price / 10).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
     return(
         <div className={styleClass.product + " container"}>
             <div className={styleClass.prodDetails}>
                 <div className={styleClass.prodItem}>
                     <div className={styleClass.prodImg}>
-                        <img src={`${product.image}`} alt="" />
+                        <img src={`${data.image}`} alt="" />
                     </div>
                     <div className={styleClass.prodContent}>
                         <h3 className={styleClass.productSubtitle}>NOVO | 300 vendidos</h3>
-                        <h1 className={styleClass.productTitle}>{product.title}</h1>
+                        <h1 className={styleClass.productTitle}>{data.title}</h1>
                         <div className={styleClass.prodOpnions}>
                             <div className={styleClass.prodItemIcons}>
                                 <AiFillStar />
@@ -90,8 +81,12 @@ export default function prod( {result}:ProductProps){
                     </div>
                 </div>
                 <div className={styleClass.row}></div>
+                <div className={styleClass.description}>
+                    <h2>Descrição</h2>
+                    <p>{data.description}</p>
                 </div>
-                <ProdColumn />
+            </div>
+                <ProdColumn price={price}/>
         </div>
     )
 }
@@ -104,15 +99,19 @@ export const getStaticPaths = () => {
 }
 export const getStaticProps: GetStaticProps = async ({params}) =>{
     
+    
+    
     const {id} = params
     const prodId = Number(id)
-    const result = {
-        prodId
-    }
+    
+    const response = await fetch(`https://fakestoreapi.com/products/${prodId}`);
+    const data = await response.json()
+
+    console.log(data)
     
     return {
         props:{
-            result
+            data
         },
         redirect: 60 * 60 //uma hr
 
