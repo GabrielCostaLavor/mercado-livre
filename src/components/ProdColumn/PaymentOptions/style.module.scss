@@ -1,0 +1,55 @@
+.PaymentOptions{
+    border: 1px solid rgba(0,0,0,.1);
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-top: 24px;
+    padding: 32px 16px 24px;
+    width: 100%;
+    color: rgba(0,0,0,.9);
+
+    .title{
+        font-size: 1.125rem;
+        font-weight: 400;
+        margin-bottom: 28px;
+        width: 100%;
+    }
+    .ticket, .creditCards, .debitCards, .bankSlip{
+        h2{
+            color: rgba(0,0,0,.9);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 12px;
+            margin-top: 24px;
+        }
+        .icons{
+            display: flex;
+
+            img{
+                margin: 10px 24px 4px 0;
+            }
+        }
+    }
+    .ticket{
+        h2{
+            margin-top: 0px;
+        }
+    }
+    .creditCards{
+        h3{
+            color: rgba(0,0,0,.55);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            margin-top: 8px;
+        }
+    }
+    .PaymentLink{
+        font-size: 0.875rem;
+        font-weight: 400;
+        margin-top: 24px;
+
+        a{
+            color: var(--blue);
+        }
+    }
+}
